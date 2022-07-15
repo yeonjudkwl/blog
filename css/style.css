@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+    font-size: 100%;
+    /* 스크롤을 부드럽게 해줍니다. */
+    scroll-behavior: smooth;
+}
+body {
+    color: #949087;
+    font-family: sans-serif;
+    background: #faf6ed url('../images/bg.png');
+}
+
+/*
+HEADER
+================================================ */
+header {
+    max-width: 1000px;
+    height: 170px;
+    margin: 2.5rem auto 0;
+    background: url('../images/header.svg') no-repeat center top/cover;
+}
+.page-title {
+    margin: 1rem 0;
+    padding-top: 2rem;
+    font-size: 3.75rem;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+}
+.page-desc {
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*
+MAIN
+================================================ */
+main {
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/*
+ARTICLE
+================================================ */
+.post-home {
+    margin-bottom: 3rem;
+}
+.post-title {
+    margin-bottom: 1.5rem;
+}
+.post-title h2 {
+    padding: 0 .5rem .875rem;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    color: #949087;
+    background: #fff;
+    line-height: 1.5;
+}
+.post-thumb {
+    margin: 0 0 1rem 0;
+    position: relative;
+}
+.post-date {
+    width: 80px;
+    height: 80px;
+    border-radius: 30% 60% 50% 70%/50%;
+    background: #93d8d0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    letter-spacing: .1rem;
+    /* 부모요소(.post-thumb)기준으로 절대위치를 정합니다. */
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+.post-date span {
+    display: block;
+    width: 60%;
+    margin: 4px auto 0;
+    padding-bottom: 2px;
+    border-bottom: 2px rgba(255,255,255,.5) dotted;
+    font-size: 1rem;
+}
+.post-img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+}
+p {
+    line-height: 1.7;
+}
+.btn {
+    margin-top: 1rem;
+    text-align: right;
+}
+.btn a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #eda1a1;
+    box-shadow: 0 0 0 5px #eda1a1;
+    border: 2px dashed #e38787;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn a:hover {
+    color: #fff;
+    background: #e38787;
+    box-shadow: 0 0 0 5px #e38787;
+    border: 2px dashed #eda1a1;
+}
+
+/*
+ASIDE
+================================================ */
+aside {
+    margin-top: 1rem;
+}
+.side-box {
+    margin-bottom: 4rem;
+    padding: .875rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    /* 윤곽선은 테두리와 다르게 레이아웃에 영향을 주지 않습니다. */
+    outline: 2px solid #ccc;
+    outline-offset: 4px;
+    position: relative;
+}
+.side-box::before {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
+    background: #fff;
+    position: absolute;
+    top: -1rem;
+    /* right: 50%;
+    transform: translateX(50%); */
+    right: 0;
+    left: 0;
+    /* Font Awesome */
+    content: '\f1b0';
+    color: #949087;
+    font-family: 'Font Awesome 5 pro';
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.side-box a:hover {
+    color: #7ac69f;
+}
+
+/* 제목 */
+.side-box h3 {
+    margin: .875rem 0 1.125rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.875rem;
+    /* 자간을 조절합니다. */
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+/* 목록 */
+.side-box ul {
+    display: block;
+    padding: 5px;
+    list-style-type: disc;
+}
+.side-box li {
+    padding: 1rem .25rem;
+    border-bottom: 1px dashed #ccc;
+}
+.side-box li:first-child {
+    padding-top: 0;
+}
+.side-box li:last-child {
+    padding-bottom: .5rem;
+    border-bottom: 0;
+}
+/* .side-box li::before {
+    display: inline-block;
+    content: '';
+    background: #93d8d0;
+    width: 8px;
+    height: 8px;
+    margin: 6px 10px 0 0;
+    border-radius: 50%;
+} */
+.side-box li::marker {
+    color: #93d8d0;
+}
+
+/*
+FOOTER
+================================================ */
+footer {
+    padding: 3rem;
+    background: #949087;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+footer li {
+    margin: 0 12px;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    color: #c7c3ba;
+}
+footer small {
+    color: #c7c3ba;
+    font-size: .875rem;
+}
+
+/*
+DESKTOP SIZE 
+================================================ */
+/* 디바이스 화면 가로 크기가 600px 이상일 때 적용합니다. */
+@media (min-width: 600px) {
+    /* Layout*/
+    main {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        padding: 1rem 2.5rem 2.5rem;
+    }
+
+    /* Header */
+    header {
+        height: 190px;
+    }
+    .page-title {
+        margin: 1rem 0 2rem;
+    }
+    .page-desc {
+        font-size: 1.125rem;
+        margin-bottom: 4rem;
+    }
+
+    /* Main */
+    section {
+        width: 68%;
+        margin-bottom: 0;
+    }
+    .post-home {
+        margin-bottom: 6rem;
+    }
+    .post-thumb {
+        margin: 0 1rem 1rem 0;
+        /* 줄바꿈을 할 때 둥근모양을 유지합니다. */
+        shape-outside: circle();
+        float: left;
+    }
+    .post-img {
+        width: 200px;
+        height: 180px;
+    }
+    .post-date {
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        /* 초기화 */
+        left: initial;
+        top: initial;
+    }
+
+    /* Aside */
+    aside {
+        width: 26%;
+    }
+    .side-box {
+        /* 스크롤에 맞춰 지정된 위치에 고정됩니다. */
+        position: sticky;
+        top: 3rem;
+    }
+}
